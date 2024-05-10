@@ -1,0 +1,26 @@
+$ docker run -d nginx
+0f12245891c30c3b16652e0f4e8e9fd482c4234f157a2a7767bb5b0917b261cb
+                                                                                
+$ docker run -d nginx
+cf9c85e50ec94b08355f8874f8f56b3e5be1c53ba833869138099143889a8516
+                                                                                
+$ docker run -d nginx
+d936e849e254d3b1d366c63b4c9df6440d423887b80996f5735f6327d9993d9d
+                                                                                
+$ docker ps                 
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+d936e849e254   nginx     "/docker-entrypoint.…"   35 seconds ago   Up 32 seconds   80/tcp    fervent_shockley
+cf9c85e50ec9   nginx     "/docker-entrypoint.…"   40 seconds ago   Up 37 seconds   80/tcp    wonderful_wiles
+0f12245891c3   nginx     "/docker-entrypoint.…"   57 seconds ago   Up 53 seconds   80/tcp    sad_jemison
+                                                                                
+$ docker stop d936e849e254  
+d936e849e254
+                                                                                
+$ docker stop cf9c85e50ec9
+cf9c85e50ec9
+                                                                                
+$ docker ps -a              
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                      PORTS     NAMES
+d936e849e254   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 36 seconds ago             fervent_shockley
+cf9c85e50ec9   nginx     "/docker-entrypoint.…"   2 minutes ago        Exited (0) 16 seconds ago             wonderful_wiles
+0f12245891c3   nginx     "/docker-entrypoint.…"   2 minutes ago        Up 2 minutes                80/tcp    sad_jemison

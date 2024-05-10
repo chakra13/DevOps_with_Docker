@@ -1,0 +1,29 @@
+$ docker image ls                     
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+nginx        latest    c20060033e06   4 months ago   187MB
+                                                                                                                                     
+$ docker ps -a                        
+CONTAINER ID   IMAGE     COMMAND                  CREATED       STATUS       PORTS     NAMES
+0f12245891c3   nginx     "/docker-entrypoint.…"   2 hours ago   Up 2 hours   80/tcp    sad_jemison
+                                                                                                                                     
+$ docker container rm --force 0f12245891c3
+0f12245891c3
+                                                                                                                                     
+$ docker image rm --force c20060033e06    
+Untagged: nginx:latest
+Untagged: nginx@sha256:86e53c4c16a6a276b204b0fd3a8143d86547c967dc8258b3d47c3a21bb68d3c6
+Deleted: sha256:c20060033e06f882b0fbe2db7d974d72e0887a3be5e554efdb0dcf8d53512647
+Deleted: sha256:32cf0b3c70998330104acfc1a02f6aae2f8a728bc6ad91c2415fda501593fa81
+Deleted: sha256:79cae367d5d42d54224c249db6a06234d077ea32168bed4261141c1016469623
+Deleted: sha256:32b31b2b0563a28eb36f90bcd835540ead275b63cf48ed85e998a8df0b1845ff
+Deleted: sha256:203226d708244adf6c392a28e22e3a7e276270da43094205137c404fc9949691
+Deleted: sha256:9969d65d0618198425e0be29ec6194be71b36c856ce9fe2142dd54163aef6eae
+Deleted: sha256:e9c1515f88f6e5652bde5583f0d1ddb7dd4097380aa66d90b722c53fbea3ebab
+Deleted: sha256:ec983b16636050e69677eb81537e955ab927757c23aaf73971ecf5f71fcc262a
+
+$ docker ps -a                            
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+                                                                                                                                     
+$ docker image ls                         
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+                                                                                                                                     

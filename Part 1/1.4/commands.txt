@@ -1,0 +1,17 @@
+$ docker run -d --rm -it --name missing_dependencies ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+0e59bd5803b93fdbb292e39555a1dc47fcddcb237e4b0a9b139f4e9a0e7d07c4
+                                                                                
+$ docker exec -it missing_dependencies bash
+root@0e59bd5803b9:/# apt-get update
+
+root@0e59bd5803b9:/# apt-get -y install curl
+
+root@0e59bd5803b9:/# curl helsinki.fi
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.22.1</center>
+</body>
+</html>
+root@0e59bd5803b9:/# 

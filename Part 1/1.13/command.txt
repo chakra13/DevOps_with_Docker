@@ -1,0 +1,1 @@
+docker build . -t back_app && docker run -p 8080:8080 back_app
